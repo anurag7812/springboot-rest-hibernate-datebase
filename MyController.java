@@ -18,8 +18,8 @@ public class MyController {
     public List<Movies> getAll(){
         return serviceList.getAll();
     }
-    @GetMapping("{movieId}")
-    public ResponseEntity<Movies> get(@PathVariable("id") int movieId){
+    @GetMapping("/hello/{movieId}")
+    public ResponseEntity<Movies> get(@PathVariable("movieId") int movieId){
         return new ResponseEntity<Movies>(serviceList.get(movieId), HttpStatus.OK);
     }
     @PostMapping()
